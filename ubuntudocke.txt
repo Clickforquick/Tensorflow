@@ -6,11 +6,28 @@ RUN  apt-get -y upgrade
 
 RUN apt-get install -y python3-pip
 
-RUN apt-get install build-essential libssl-dev libffi-dev python-dev
+RUN apt-get install build-essential libssl-dev libffi-dev gettext unzip python-dev
 
+RUN apt-get install git
+# git config --global user.name "Your Name"
+# git config --global user.email "youremail@domain.com"
 # RUN apt-get install -y python3-venv
+# mkdir environments
+# cd environments
+# python3 -m venv my_env
+# ls my_env
+# source my_env/bin/activate
+# nano hello.py
+# print("Hello, World!")
+# python hello.py
+# deactivate
+# cat /etc/*release
+
+#pip3 install keras
+# python3 -c "from keras import backend;print(backend._BACKEND)"
 
 # Install tensorflow
+# RUN pip3 install tensorflow==1.5
 RUN pip install --upgrade \
   https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.7.1-cp36-cp36m-linux_x86_64.whl
 
