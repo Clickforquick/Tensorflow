@@ -22,7 +22,7 @@ RUN apt-get install git
 # python hello.py
 # deactivate
 # cat /etc/*release
-
+# mv /home/mine/fastai/courses-master/deeplearning1/nbs/vgg16.h5 ~/.keras/models/vgg16.h5
 #pip3 install keras
 # python3 -c "from keras import backend;print(backend._BACKEND)"
 
