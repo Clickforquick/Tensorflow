@@ -30,7 +30,8 @@ test_dir = './test-images'
 test_batches = ImageDataGenerator().flow_from_directory(test_dir,target_size=(299,299),classes=['daisy','dandelion'],batch_size=10)
 
 predictions = new_model.predict_generator(test_batches,steps=1,verbose=0)
-predictions
+print('predictions {0}'.format(predictions))
+# print('predictions {0}'.predictions)
 #   Connect the image generator to a folder contains the source images the image generator alters.  
 #   Training image generator
 # train_generator = train_image_gen.flow_from_directory(
