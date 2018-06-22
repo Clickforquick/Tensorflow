@@ -6,7 +6,11 @@ from keras.models import load_model
 from keras.layers import Dense, GlobalAveragePooling2D
 from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
+
 from keras.preprocessing import image
+from keras.applications.inception_v3 import preprocess_input
+from keras.applications.inception_v3 import decode_predictions
+import numpy as np
 
 # Suppress warning and informational messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
