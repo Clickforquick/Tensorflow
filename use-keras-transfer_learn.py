@@ -6,6 +6,7 @@ from keras.models import load_model
 from keras.layers import Dense, GlobalAveragePooling2D
 from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
+from keras.preprocessing import image
 
 # Suppress warning and informational messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -16,7 +17,7 @@ new_model = load_model('inceptionv3-transfer-learning.h5')
 # new_model.get_weights()
 # new_model.optimizer
 
-
+"""
 def create_img_generator():
   return  ImageDataGenerator(
       preprocessing_function=preprocess_input
@@ -39,6 +40,16 @@ print('predictions {0}'.format(predictions))
 #   target_size=(Image_width, Image_height),
 #   batch_size=batch_size
 # )
+"""
+img_path = 'test-images/daisy/Daisy1.jpg'
+
+img = image.load_img(img_path, target_size=(299, 299))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis = 0)
+x = preprocess_input(x)
+
+features = model.predict(x)
+print(decode_predictions(features, top = 2))
 
 
 """
