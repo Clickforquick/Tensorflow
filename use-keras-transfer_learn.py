@@ -45,15 +45,18 @@ print('predictions {0}'.format(predictions))
 #   batch_size=batch_size
 # )
 """
-img_path = 'test-images/daisy/Daisy1.jpg'
-
-img = image.load_img(img_path, target_size=(299, 299))
-x = image.img_to_array(img)
-x = np.expand_dims(x, axis = 0)
-x = preprocess_input(x)
-
-features = new_model.predict(x)
-print(decode_predictions(features, top = 2))
+#put images in testset folder, name images from 1.jpg to 10.jpg
+for i in range(1, 11):
+	
+	img_path = 'naga/%s.jpg' % (i)
+	
+	img = image.load_img(img_path, target_size=(299, 299))
+	x = image.img_to_array(img)
+	x = np.expand_dims(x, axis = 0)
+	x = preprocess_input(x)
+	
+	features = new_model.predict(x)
+	print(decode_predictions(features, top = 3))
 
 
 """
