@@ -17,9 +17,9 @@ clasificationList =['Daisy','Dandelion']
 
 new_model = load_model('inceptionv3-transfer-learning.model')
 
-for root, dirs, files in os.walk(inputDir):  
+for root, dirs, files in os.walk(inputDir):
     for filename in files:
-	
+
         img = image.load_img(inputDir+'/'+filename, target_size=(299, 299))
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis = 0)
@@ -36,7 +36,5 @@ for root, dirs, files in os.walk(inputDir):
         else:
             print('Input image clasification is : '+clasificationList[1])
         print(" ")
-        
+
 print('****************************************')
-        
-        
