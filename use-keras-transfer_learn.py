@@ -1,14 +1,10 @@
 import os ,os.path
 from keras.applications.inception_v3 import InceptionV3, preprocess_input
-from keras.models import Model
-from keras.models import load_model
-from keras.layers import Dense, GlobalAveragePooling2D
-from keras.preprocessing.image import ImageDataGenerator
-from keras.optimizers import SGD
+from keras.models import Model, load_model
 from keras.preprocessing import image
-from keras.applications.inception_v3 import preprocess_input
-from keras.applications.inception_v3 import decode_predictions
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
 # Suppress warning and informational messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -30,7 +26,8 @@ for root, dirs, files in os.walk(inputDir):
         print(" ")
         print('Processing file : '+ filename)
         print('Here are the weights : ',features)
-        
+        display_img=mpimg.imread(inputDir+'/'+filename)
+        imgplot = plt.imshow(display_img)
         if features[0][0] > features[0][1] :
             print('Input image clasification is : '+clasificationList[0])
         else:
@@ -38,3 +35,4 @@ for root, dirs, files in os.walk(inputDir):
         print(" ")
 
 print('****************************************')
+# https://www.youtube.com/watch?v=osaKmG5i30E
