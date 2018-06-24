@@ -22,14 +22,14 @@
  8. At the end we will the test images and their classification
 
 # Process to train and classify images of different categories
-  1.Delete "data" and "test" folders in root folder (Tensorflow)
-  2.Create a folder named data.  Under that folder create the subfolders "train" and "validate" 
-  3.create subfolders for each category of images in both "train" and "validate" folders
-  4.Place training images in subfolders under "train" folder
-  5.Place validation images in subfolders under "validate" folder
-  6.Create a folder named "test" under "data" folder.
-  7.copy images to be classified under test folder
-  8.Open "use-keras-transfer_learn.ipynb" in jupyter notebook
-  9.modify "clasificationList =['Daisy','Dandelion']" code block
-  10.Replace ['Daisy','Dandelion'] with the classes used in above training process and save the file.Class names are the names of    folders containg the images
-   11.Repeat the steps from 3-8 from "Process to run existing project"
+  1. Delete "data" and "test" folders in root folder (Tensorflow)
+  2. Create a folder named data.  Under that folder create the subfolders "train" and "validate" 
+  3. create subfolders for each category of images in both "train" and "validate" folders
+  4. Place training images in subfolders under "train" folder
+  5. Place validation images in subfolders under "validate" folder
+  6. Create a folder named "test" under "data" folder.
+  7. copy images to be classified under test folder
+  8. Open "use-keras-transfer_learn.ipynb" in jupyter notebook
+  9. modify "clasificationList =['Daisy','Dandelion']" code block
+  10. Replace ['Daisy','Dandelion'] with the classes used in above training process and save the file.Class names are the names of    folders containg the images
+   11. Repeat the steps from 3-8 from "Process to run existing project"
